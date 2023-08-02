@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rommy Fitness</title>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="Projects\Project_1_Gym_Website\Gym.css"> -->
+</head>
+<style>
+    /* CSS Reset */
+    body{
+        margin: 0px;
+        padding: 0px;
+        background: url(project_photos/Gym\ fitness\ wallpaper.jpg); /* we can give background by path too */
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        color: white;
+        font-family: 'Libre Baskerville', serif;
+        height: 1450px;
+        font-size: 10px;
+    }
+
+    .background{
+        position: absolute;
+        z-index: -1;
+    }
+
+    .left{
+        display: inline-block;
+        /* border: 2px solid red; */
+        position: absolute;
+        left: 22px;
+        top: 20px;   
+        font-family: 'Acme', sans-serif;
+    }
+    .left img{
+        width: 45px;
+        filter: invert(100%); /*this is a css function which inverts the image color from white to black we will study it later */
+        margin-left: 20px;
+    }
+    .left div{
+        text-align: center;
+        font-size: 21px;
+    }
+
+    .mid{
+        /* border: 2px solid green; */
+        display: block;
+        width: 444px;
+        margin: 20px auto; /*to use auto in margin the condition is that display should be block and width should be set*/
+    }
+    .navbar{
+        display: inline-block;
+        margin: 0px;
+        padding: 0px;
+    }
+    .navbar li{
+        display: inline-block;
+        font-size: 15px;
+        margin: 6px;
+        padding: 10px;
+    }
+    .navbar li a{
+        color: white;
+        text-decoration: none;
+    }
+    .navbar li a:hover, .navbar li a:active{
+        text-decoration: underline;
+        color: grey;
+    }
+
+    .right{
+        position: absolute;
+        right: 22px;
+        top: 20px;
+        display: inline-block;
+        /* border: 2px solid yellow; */
+    }
+    .btn{
+        margin: 10px 6px;
+        background-color: black;
+        color: white;
+        padding: 3px 4px;
+        border: 2px grey solid;
+        border-radius: 10px;
+        font-size: 12px;
+        cursor: pointer;
+    }
+    .btn:hover{
+        background-color: rgb(71, 65, 65);
+    }
+    .container{
+        border: 2px solid white;
+        margin: 89px 85px;
+        padding: 65px 48px;
+        width: 33%;
+        border-radius: 10px;
+    }
+    .form-group input{
+        text-align: center;
+        display: block;
+        width: 300px;
+        padding: 5px;
+        border-radius: 6px;
+        margin: 3px auto;
+    }
+
+    .container h1{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .container button{
+        display: block;
+        width: 194px;
+        margin: 25px auto;
+    }
+    .footer{
+        background-color: white;
+        padding-top: 60px;
+        padding-left: 60px;
+        padding-right: 60px;
+        position: relative;
+        top: 20%;
+        /* border: 2px solid red; */
+    }
+ 
+    .leftfooter{
+        display: inline-block;
+        /* border: 2px solid red; */
+        font-family: 'Acme', sans-serif;
+        width: 150px;
+        margin: 0px 65px;
+        font-size: 40px;
+    }
+    .leftfooter .logo{
+       margin-left: 15px;
+       width: 130px; 
+    }
+    .socialmedia .image1{
+        width: 80px;
+        margin-top: 30px;
+        padding: 0px;
+    }
+    .socialmedia .image2{
+        width: 55px;
+        margin-top: 34px;
+        padding: 0px;
+        position: absolute;
+    }
+    .leftfooter div{
+        color: black;
+    }
+    .midfooter{
+        color: black;
+        display: inline-block;
+        font-size: 18px;
+        width: 30%;
+        height: 350px;
+        border: 7px solid black;
+        border-radius: 35px;
+        box-sizing: border-box;
+        margin: 0px 65px;
+    }
+    .midfooter div{
+        list-style: none;
+        padding: 0px 2px;
+        margin: 4px 0px;
+        text-align: center;
+    }
+    .midfooter li a{
+        text-decoration: none;
+        color: black;
+    }
+    .midfooter li a:hover{
+        text-decoration: underline;
+    }
+   
+    .rightfooter{
+        display: inline-block;
+        color: black;
+        font-size: 18px;
+        width: 400px;
+        border: 7px solid black;
+        border-radius: 35px;
+        box-sizing: border-box;
+        margin: 0px 65px;
+    }
+    .rightfooter h3{
+        text-align: center;
+        font-size: 30px;
+    }
+    .rightfooter p{
+        text-align: center;
+        margin-top: 40px;
+    }
+    .hr1{
+        margin-top: 60px;
+    }
+    .hr2{
+        margin-top: 20px;
+    }
+    .finish{
+        color: black;
+        text-align: center;
+    } 
+    
+    @media((min-width:1301px) and (max-width:1500px)){ 
+        .footer{
+            top: 10%;
+        }
+    }
+
+    @media(max-width:1500px){ 
+        .midfooter, .rightfooter{
+            display: block;
+            width: 70%;
+            margin: 0px auto;
+            margin-top: 50px;
+        }
+        .leftfooter{
+            margin-left: 45%;
+        }
+    }
+
+    @media((min-width: 1000px) and (max-width:1300px)){
+        .footer{
+            top: 0%;
+        }
+    }
+
+    @media(max-width:1000px){ 
+        .form-group input{
+            width: 95%;
+        }
+        .leftfooter{
+            margin-left: 40%;   
+        }
+        .footer{
+            top: 0px;
+        }
+        .container{
+            padding: 10px 60px;
+        }
+    }
+
+    @media((min-width: 600px) and (max-width: 900px)){
+        .mid{
+            display: none;
+        }
+        body{
+            background-size: 130% auto;
+        }
+    }
+
+    @media(max-width: 600px){
+        .mid{
+            display: none;
+        }
+        .leftfooter{
+            margin-left: 30%;   
+        }
+        body{
+            background-size: 170% auto;
+        }
+        .midfooter, .rightfooter{
+            font-size: 10px;
+        }
+        .midfooter{
+            height: fit-content;
+        }
+    }        
+
+</style>
+<body>
+
+    <header class="header">
+        <!-- left box for logo -->
+        <div class="left">
+            <img src="project_photos/dumbell logo 2.png" alt="">
+            <div>Musculine</div>
+        </div>
+        <!-- mid box for navbar -->
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Fitness Center</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>    
+        </div>
+        <!-- right box for buttons -->
+        <div class="right">
+            <button class="btn">Call Us Now</button><button class="btn">Email Us</button>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Join the best gym of India now</h1>
+        <form action="noaction.php">
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Gender">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your age">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Phone number">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter Email Address">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your locality">
+            </div>
+            <button class="btn">Submit</button>
+        </form>
+    </div>
+    <div class="footer">
+            <div class="leftfooter">
+                <img class="logo" src="project_photos/dumbell logo 2.png" alt="">
+                <div>Musculine</div>
+                <span class="socialmedia" ><a href="#"><img class="image1" src="https://i.pinimg.com/originals/8a/77/05/8a770507298d728a1e3e039a0507dd8e.png" alt=""></a></span>
+                <span><a class="socialmedia" href="#"><img src="https://imgs.search.brave.com/PCsdGkPDr3plum9s26rEjldVnKffvCs0onrGq7WDltY/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5u/aklUaV92Y1h3czQ3/T2lsRWRtNG9RSGFI/YSZwaWQ9QXBp" class="image2" alt=""></a></span></span>
+            </div>
+            <!-- mid box for navbar -->
+            <div class="midfooter">
+                <div class="info">
+                    <h1>Information</h1>
+                    <div>Fitness Club</div>
+                    <div>Service</div>
+                    <div>My account</div>
+                    <div>About Us</div>
+                    <div>Sign in</div>
+                    <div>Log out</div>
+                </div>    
+            </div>
+            <!-- right box for buttons -->
+            <div class="rightfooter">
+                <h3>Contact Us</h3>
+                <p>MasculineFitness123@gmail.com</p>
+            </div>     
+            <br>
+            <hr class="hr1">
+            <h3 class="finish">copyright &copy; 2022 Masculine Fitness Company | Powered by Rommy </h3>
+            <hr class="hr2">
+    </div>
+</body>
+</html>
