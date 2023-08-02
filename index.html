@@ -7,7 +7,7 @@
     <title>Rommy Fitness</title>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
-    
+    <!-- <link rel="stylesheet" href="Projects\Project_1_Gym_Website\Gym.css"> -->
 </head>
 <style>
     /* CSS Reset */
@@ -30,6 +30,7 @@
 
     .left{
         display: inline-block;
+        /* border: 2px solid red; */
         position: absolute;
         left: 22px;
         top: 20px;   
@@ -37,7 +38,7 @@
     }
     .left img{
         width: 45px;
-        filter: invert(100%); 
+        filter: invert(100%);
         margin-left: 20px;
     }
     .left div{
@@ -125,6 +126,7 @@
  
     .leftfooter{
         display: inline-block;
+        /* border: 2px solid red; */
         font-family: 'Acme', sans-serif;
         width: 150px;
         margin: 0px 65px;
@@ -161,15 +163,13 @@
     }
     .midfooter div{
         list-style: none;
+        cursor: pointer;
         padding: 0px 2px;
         margin: 4px 0px;
         text-align: center;
     }
-    .midfooter li a{
-        text-decoration: none;
-        color: black;
-    }
-    .midfooter li a:hover{
+    
+    .info div a:hover{
         text-decoration: underline;
     }
    
@@ -183,9 +183,8 @@
         box-sizing: border-box;
         margin: 0px 65px;
     }
-    .rightfooter h3{
+    .rightfooter h1{
         text-align: center;
-        font-size: 30px;
     }
     .rightfooter p{
         text-align: center;
@@ -258,10 +257,16 @@
             margin-left: 30%;   
         }
         body{
-            background-size: 170% auto;
+            background: black;
+        }
+        .container button{
+            width: 100px;
         }
         .midfooter, .rightfooter{
             font-size: 10px;
+        }
+        .rightfooter p{
+            font-size: 90%;
         }
         .midfooter{
             height: fit-content;
@@ -326,17 +331,17 @@
             <div class="midfooter">
                 <div class="info">
                     <h1>Information</h1>
-                    <div>Fitness Club</div>
-                    <div>Service</div>
-                    <div>My account</div>
-                    <div>About Us</div>
-                    <div>Sign in</div>
-                    <div>Log out</div>
+                    <div><a>Fitness Club</a></div>
+                    <div><a>Service</a></div>
+                    <div><a>My account</a></div>
+                    <div><a>About Us</a></div>
+                    <div><a>Sign in</a></div>
+                    <div><a>Log out</a></div>
                 </div>    
             </div>
             <!-- right box for buttons -->
             <div class="rightfooter">
-                <h3>Contact Us</h3>
+                <h1>Contact Us</h1>
                 <p>MasculineFitness123@gmail.com</p>
             </div>     
             <br>
